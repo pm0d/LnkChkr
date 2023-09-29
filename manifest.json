@@ -3,12 +3,16 @@
     "manifest_version": 3,
     "name": "Link Checker",
     "version": "1.0",
-    "host_permissions": ["<all_urls>"],
-    "permissions": ["bookmarks","tabs"],
+    "host_permissions": ["https://*/*","http://*/*"],
+    "permissions": ["bookmarks","sidePanel"],
     "action": {
+      "default_title": "Click to open sidebar"
     },
     "background": {
       "service_worker": "background.js"
+    },
+    "side_panel": {
+      "default_path": "side_panel.html"
     }
   }
   
