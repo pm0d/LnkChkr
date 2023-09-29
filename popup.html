@@ -1,0 +1,31 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    textarea {
+      width: 400px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <textarea id="links" placeholder="Paste your links here"></textarea><br>
+  <button type="submit" id="checkLinks">Check Pasted Links</button><p><br><hr><br><p>
+  <button type="submit" id="checkBookmarks">Check Bookmarks</button>
+  <div id="results"></div>
+  <script src="popup.js"></script>
+  <script>
+    // Check if dark mode is enabled
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // If dark mode is enabled, change the CSS
+      document.getElementById('themeStyle').innerHTML = `
+        body {
+          background-color: #333;
+          color: #fff;
+        }
+      `;
+    }
+  </script>
+</body>
+</html>

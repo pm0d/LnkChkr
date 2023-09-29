@@ -1,0 +1,14 @@
+// manifest.json
+{
+    "manifest_version": 3,
+    "name": "Link Checker",
+    "version": "1.0",
+    "host_permissions": ["<all_urls>"],
+    "permissions": ["bookmarks","tabs"],
+    "action": {
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
